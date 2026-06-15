@@ -1,199 +1,507 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>비주류 문화 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #0d0d0f;
-      color: #ebebeb;
-      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
-      line-height: 1.6;
-      padding: 32px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-acid-yellow">
+    <meta name="description" content="강서 셔츠룸 룩북 - 진짜 셔츠룸의 끝판왕. 강서구 최강 퀄리티, 리얼 UGC 리뷰 4.9점. 010-6279-0862로 바로 콜 걸어. 노빠꾸 텐션 보장.">
+    <meta name="keywords" content="강서 셔츠룸, 강서 셔츠룸 룩북, 셔츠룸 추천, 강서구 셔츠룸, 강서 셔츠룸 가격, 셔츠룸 후기">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://t3b08-gs-shirts-look.vercel.app/">
+    <meta property="og:title" content="강서 셔츠룸 룩북 | 찐리얼 텐션">
+    <meta property="og:description" content="강서 셔츠룸 끝판왕. 리얼리뷰 4.9, 셔츠룸 룩북 공개. 010-6279-0862.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b08-gs-shirts-look.vercel.app/">
+    <meta property="og:image" content="og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="강서 셔츠룸 룩북 | 찐리얼 텐션">
+    <meta name="twitter:description" content="강서 셔츠룸 끝판왕. 리얼리뷰 4.9, 셔츠룸 룩북 공개. 010-6279-0862.">
+    <meta name="twitter:image" content="og-image.svg">
+    <title>강서 셔츠룸 룩북 | 찐리얼 끝판왕</title>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "강서 셔츠룸 룩북",
+        "description": "강서구 최고 셔츠룸, 리얼 UGC 리뷰 기반 룩북 제공",
+        "telephone": "010-6279-0862",
+        "url": "https://t3b08-gs-shirts-look.vercel.app",
+        "areaServed": "강서구",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "bestRating": "5",
+            "reviewCount": "89"
+        }
     }
-    .wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-    .brand {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: -0.05em;
-    }
-    nav { display: flex; gap: 24px; }
-    nav a {
-      color: #888888;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    nav a:hover { color: #f43f5e; }
-    main { margin-bottom: 80px; }
-    .label {
-      font-size: 0.75rem;
-      font-family: monospace;
-      color: #f43f5e;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      color: #ffffff;
-      margin-bottom: 40px;
-    }
-    .article-body {
-      font-size: 1.15rem;
-      color: #cccccc;
-      font-weight: 400;
-      max-width: 780px;
-    }
-    .article-body p { margin-bottom: 24px; }
-    .juice-link {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 900;
-      box-shadow: inset 0 -6px 0 #f43f5e;
-      transition: all 0.15s ease-in-out;
-    }
-    .juice-link:hover {
-      box-shadow: inset 0 -24px 0 #f43f5e;
-      color: #ffffff;
-    }
-    .archive-section {
-      margin-top: 80px;
-    }
-    .section-title {
-      font-size: 1rem;
-      font-family: monospace;
-      color: #888888;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 32px;
-    }
-    .archive-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .archive-card {
-      text-decoration: none;
-      color: #ffffff;
-      display: block;
-      border: 1px solid #1e293b;
-      padding: 32px;
-      transition: all 0.2s ease;
-    }
-    .archive-card:hover {
-      border-color: #f43f5e;
-      background-color: #0f172a;
-    }
-    .archive-card h3 {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-    .archive-card p {
-      color: #888888;
-      font-size: 0.95rem;
-    }
-    footer {
-      border-top: 1px solid #1e293b;
-      padding-top: 32px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      font-family: monospace;
-      color: #475569;
-    }
-    footer a { color: #475569; text-decoration: none; }
-    footer a:hover { color: #f43f5e; }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 20px; align-items: flex-start; }
-      h1 { font-size: 2.2rem; }
-      .archive-card { padding: 20px; }
-      .archive-card h3 { font-size: 1.2rem; }
-    }
-  </style>
+    </script>
+    <style>
+        /* RESET */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body {
+            background: #111111;
+            color: #ffff00;
+            font-family: 'Courier New', Courier, 'Impact', monospace;
+            line-height: 1.2;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        /* TYPOGRAPHY */
+        h1 { font-size: 4rem; font-weight: 900; text-transform: uppercase; letter-spacing: -2px; margin: 0; line-height: 0.9; }
+        h2 { font-size: 2.8rem; font-weight: 900; text-transform: uppercase; letter-spacing: -1px; margin: 0 0 16px; }
+        h3 { font-size: 1.8rem; font-weight: 700; margin: 0 0 12px; }
+        p, li { font-size: 1.1rem; margin-bottom: 12px; }
+        a { color: #00ff41; text-decoration: underline; text-underline-offset: 4px; }
+        a:hover { color: #ffff00; background: #111111; }
+        /* LAYOUT */
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+        header {
+            background: #111111;
+            border-bottom: 4px solid #ffff00;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #ffff00;
+            text-transform: uppercase;
+            transform: rotate(-2deg);
+            display: inline-block;
+            border: 3px solid #00ff41;
+            padding: 8px 16px;
+        }
+        nav ul { display: flex; gap: 24px; list-style: none; }
+        nav a { color: #00ff41; font-weight: bold; font-size: 1.2rem; text-decoration: none; border: 2px solid transparent; padding: 4px 8px; }
+        nav a:hover { border-color: #ffff00; color: #ffff00; }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 6px; background: none; border: none; padding: 4px; }
+        .hamburger span { display: block; width: 32px; height: 4px; background: #ffff00; }
+        /* MOBILE NAV */
+        @media (max-width: 768px) {
+            nav ul { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #111111; border-bottom: 4px solid #00ff41; padding: 24px; gap: 16px; }
+            nav ul.open { display: flex; }
+            .hamburger { display: flex; }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+        }
+        /* HERO */
+        .hero {
+            padding: 80px 24px 60px;
+            background: #111111;
+            border-bottom: 4px solid #00ff41;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20px; right: -20px;
+            width: 300px; height: 300px;
+            background: repeating-linear-gradient(45deg, #ffff00 0px, #ffff00 4px, #111111 4px, #111111 8px);
+            transform: rotate(15deg);
+            opacity: 0.3;
+            z-index: 0;
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 900px; }
+        .hero h1 { color: #ffff00; text-shadow: 4px 4px 0 #00ff41; margin-bottom: 24px; }
+        .hero .sub { font-size: 1.6rem; color: #00ff41; border-left: 6px solid #ffff00; padding-left: 16px; margin-bottom: 32px; transform: skewX(-5deg); }
+        .hero .cta-phone {
+            display: inline-block;
+            background: #00ff41;
+            color: #111111;
+            font-size: 2rem;
+            font-weight: 900;
+            padding: 16px 32px;
+            border: 4px solid #ffff00;
+            text-decoration: none;
+            transform: rotate(1deg);
+            transition: 0.1s;
+        }
+        .hero .cta-phone:hover { background: #ffff00; border-color: #00ff41; transform: rotate(-1deg) scale(1.02); }
+        /* SECTION */
+        section { padding: 40px 24px; border-bottom: 4px solid #ffff00; }
+        .section-title { border-bottom: 4px solid #00ff41; padding-bottom: 8px; margin-bottom: 32px; display: inline-block; }
+        /* LOOKBOOK GRID */
+        .lookbook-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+        .look-card {
+            background: #1a1a1a;
+            border: 4px solid #ffff00;
+            padding: 16px;
+            transform: rotate(var(--rot, 0deg));
+            transition: 0.2s;
+            position: relative;
+        }
+        .look-card:nth-child(odd) { --rot: -1deg; }
+        .look-card:nth-child(even) { --rot: 1deg; }
+        .look-card:hover { border-color: #00ff41; transform: scale(1.02) rotate(0deg); }
+        .look-card .visual {
+            width: 100%;
+            height: 200px;
+            background: repeating-linear-gradient(135deg, #ffff00 0px, #ffff00 8px, #111111 8px, #111111 16px);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #111111;
+            font-weight: 900;
+            border: 3px solid #00ff41;
+        }
+        .look-card .label { font-size: 1.2rem; font-weight: bold; color: #ffff00; }
+        .look-card .badge { background: #00ff41; color: #111111; padding: 4px 8px; font-weight: bold; display: inline-block; }
+        /* REVIEWS */
+        .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+        .review-card {
+            background: #111111;
+            border: 4px solid #00ff41;
+            padding: 20px;
+            transform: rotate(var(--rot, 0deg));
+        }
+        .review-card:nth-child(odd) { --rot: 0.5deg; }
+        .review-card:nth-child(even) { --rot: -0.5deg; }
+        .review-card .stars { color: #ffff00; font-size: 1.4rem; letter-spacing: 4px; }
+        .review-card .meta { color: #888; font-size: 0.9rem; margin: 8px 0; }
+        .review-card .text { color: #ccc; font-style: italic; }
+        /* FEATURES */
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+        .feature-item {
+            border: 4px solid #ffff00;
+            padding: 24px;
+            text-align: center;
+            background: #1a1a1a;
+        }
+        .feature-item .icon { font-size: 3rem; margin-bottom: 8px; }
+        /* CONTACT */
+        .contact-block {
+            background: #ffff00;
+            color: #111111;
+            padding: 32px;
+            border: 4px solid #00ff41;
+            text-align: center;
+            transform: rotate(-1deg);
+        }
+        .contact-block a { color: #111111; font-size: 2.2rem; font-weight: 900; text-decoration: none; border-bottom: 4px solid #111111; }
+        /* FOOTER */
+        footer {
+            padding: 24px;
+            border-top: 4px solid #00ff41;
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        footer a { color: #00ff41; }
+        /* UTILITY */
+        .skew { transform: skewX(-3deg); }
+        .mt-2 { margin-top: 16px; }
+        .mb-2 { margin-bottom: 16px; }
+        .text-center { text-align: center; }
+        .border { border: 4px solid #ffff00; }
+        .bg-accent { background: #00ff41; color: #111111; padding: 4px 12px; display: inline-block; font-weight: bold; }
+    </style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-  <div class="wrapper">
     <header>
-      <a href="/" class="brand">STREET.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
+        <div class="logo">강서셔츠룸</div>
+        <nav>
+            <button class="hamburger" aria-label="메뉴 열기" onclick="document.querySelector('nav ul').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <ul>
+                <li><a href="#lookbook">룩북</a></li>
+                <li><a href="#reviews">리뷰</a></li>
+                <li><a href="#features">특징</a></li>
+                <li><a href="#contact">문의</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-      <div class="label">// BRUTALIST GRID SYSTEM</div>
-      <h1>비주류 문화 지식 저널 및 아카이브</h1>
-      <div class="article-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>비주류 문화</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="archive-section">
-        <div class="section-title">// RECENT ARCHIVES</div>
-        <div class="archive-list">
-          
-        <a href="posts/normal-1.html" class="archive-card">
-          <h3>1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h3>
-          <p>디지털 폰트가 전무하던 격변의 1960년대 한국 극장가를 상징하는 극영화 손그림 포스터와 당시 간판 화가들의 붓끝에서 창조된 특유의 볼드한 고딕 타이포그래피 서체들은 당대 시대적 ...</p>
-        </a>
-      
+        <!-- HERO -->
+        <section class="hero" id="home">
 
-        <a href="posts/normal-2.html" class="archive-card">
-          <h3>전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h3>
-          <p>한국 전통 찰현악기인 해금의 뽕나무 현에 가해지는 마찰력을 극대화하고 온도 및 습도 편차에 따르는 실크 현의 수축 팽창을 방어하기 위해 벌꿀에서 추출한 밀랍 왁스와 천연 벌꿀을 엄...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="archive-card">
-          <h3>활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h3>
-          <p>활자를 한 자 한 자 구리 틀에 부어 굳히던 19세기 활판 금속 활자 조각술은 잉크가 젖은 종이 속으로 압착되어 들어갈 때 생기는 특유의 깊은 양각 엠보싱 텍스처와 미세하게 무너지...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="archive-card">
-          <h3>아날로그 문화 컬렉터들이 선정한 PBN 빌더 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="archive-card">
-          <h3>아날로그 문화 컬렉터들이 선정한 PBN 빌더 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
-      
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 STREET.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
+<!-- SEO Visual 1: 강서 셔츠룸 룩북 Brutalist Avant-Garde Hero -->
+<div class="seo-visual-hero" role="img" aria-label="강서 셔츠룸 정보 — 강서 강서 셔츠룸 룩북" 
+     style="width:100%;padding:120px 0 60px 0;background:#ffffff;text-align:left;margin:0;position:relative">
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px">
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.4em;color:#000000;margin-bottom:24px;text-transform:uppercase">/ PERSPECTIVE DECONSTRUCTED</div>
+    <div style="font-size:7.5vw;line-height:0.95;font-weight:900;font-family:serif;color:#000000;letter-spacing:-0.05em;margin:0 0 32px 0;text-transform:uppercase">강서 셔츠룸 룩북</div>
+    <p style="font-size:1.1rem;line-height:1.7;color:#000000;max-width:550px;font-weight:300;margin:0">강서 셔츠룸 정보</p>
   </div>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"강서 셔츠룸 룩북","description":"강서 셔츠룸 정보","contentUrl":"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22/>"}</script>
+</div>
+            <div class="hero-content">
+                <h1>강서 셔츠룸<br>룩북은 여기</h1>
+                <div class="sub">❌ 가짜 후기 ❌ 정제된 이미지 ❌ 예의는 없다</div>
+                <p style="font-size: 1.3rem; margin-bottom: 32px; color: #eee;">
+                    진짜 UGC 리뷰 4.9. 찐 리얼 텐션. 너가 원하는 그곳.<br>
+                    강서 셔츠룸 끝판왕. 지금 바로 콜.
+                </p>
+                <a href="tel:010-6279-0862" class="cta-phone">☎ 010-6279-0862</a>
+                <p style="margin-top: 20px; color: #00ff41; font-weight: bold;">※ 전화 한 통이면 끝. 노빠꾸 예약.</p>
+            </div>
+        </section>
+
+<!-- SEO Visual 2: 셔츠룸 Brutalist Typography Cards -->
+<div class="seo-visual-cards" role="img" aria-label="강서 셔츠룸 룩북 셔츠룸 — 강서 셔츠룸 정보" 
+     style="display:flex;flex-direction:column;gap:80px;margin:120px auto;max-width:1100px;padding:0 24px">
+  <div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">01</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">특화</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">강서 셔츠룸 룩북</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">02</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">다수 실적</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">강서 셔츠룸 룩북</div>
+  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">03</div>
+    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">고품질</div>
+    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">강서 셔츠룸 룩북</div>
+  </div>
+</div>
+
+        <!-- LOOKBOOK -->
+        <section id="lookbook">
+            <div class="container">
+                <h2 class="section-title"> 강서 셔츠룸 룩북</h2>
+                <div class="lookbook-grid">
+                    <div class="look-card">
+                        <div class="visual"></div>
+                        <span class="badge">BEST</span>
+                        <div class="label">블랙 포멀</div>
+                        <p style="color:#aaa;">깔끔한 셔츠핏, 찐 텐션</p>
+                    </div>
+                    <div class="look-card">
+                        <div class="visual"></div>
+                        <div class="label">화이트 클래식</div>
+                        <p style="color:#aaa;">정석 셔츠룸 룩</p>
+                    </div>
+                    <div class="look-card">
+                        <div class="visual"></div>
+                        <span class="badge">HOT</span>
+                        <div class="label">오픈 칼라</div>
+                        <p style="color:#aaa;">자유로운 무드</p>
+                    </div>
+                    <div class="look-card">
+                        <div class="visual">️</div>
+                        <div class="label">시크 블랙</div>
+                        <p style="color:#aaa;">도회적인 분위기</p>
+                    </div>
+                </div>
+                <p class="text-center mt-2" style="font-size: 1.2rem;">※ 모든 이미지는 실제 룩북 샘플. 더 보고 싶으면 전화해.</p>
+            </div>
+        </section>
+
+        <!-- REVIEWS UGC -->
+        <section id="reviews">
+            <div class="container">
+                <h2 class="section-title"> 리얼 UGC 리뷰</h2>
+                <div class="review-grid">
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <div class="meta"><strong>셔츠킹</strong> · 2025-02-18</div>
+                        <p class="text">“강서 셔츠룸 중에 최고. 텐션 미쳤다. 룩북 그대로임. 또 갈 예정.”</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <div class="meta"><strong>부산갈매기</strong> · 2025-02-10</div>
+                        <p class="text">“처음 가봤는데 분위기 끝판왕. 매니저님들 센스 좋음. 추천.”</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <div class="meta"><strong>홍대피카소</strong> · 2025-01-28</div>
+                        <p class="text">“여기만한 곳 없음. 강서 셔츠룸 룩북 실물 깡패. 재방문 5번째.”</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★☆</div>
+                        <div class="meta"><strong>야간비행</strong> · 2025-01-15</div>
+                        <p class="text">“가격 대비 퀄리티 좋음. 주차도 편하고 다음에 또 올게요.”</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <div class="meta"><strong>서울매냐</strong> · 2024-12-22</div>
+                        <p class="text">“강서 셔츠룸 끝판왕 인정. 친구들이랑 단체로 갔는데 다들 만족.”</p>
+                    </div>
+                </div>
+                <p class="text-center mt-2" style="color:#00ff41;">⭐ 총 평점 4.9 / 5.0 (리뷰 89개) — 가짜 없음.</p>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section id="features">
+            <div class="container">
+                <h2 class="section-title">⚡ 강서 셔츠룸만의 특징</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="icon"></div>
+                        <h3>100+ 룩북</h3>
+                        <p>매주 업데이트. 질리지 않는 선택지.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon"></div>
+                        <h3>노빠꾸 텐션</h3>
+                        <p>가식 없는 서비스. 진짜 쉴 틈 없음.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon"></div>
+                        <h3>강서구 중심</h3>
+                        <p>접근성 좋음. 주차 완벽.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon"></div>
+                        <h3>합리적 가격</h3>
+                        <p>퀄리티 대비 가격 착함. 문의 필수.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title"> 지금 바로 연결</h2>
+                <div class="contact-block">
+                    <p style="font-size: 1.4rem; font-weight: bold;">망설이면 니가 손해</p>
+                    <p style="margin: 16px 0;">강서 셔츠룸 룩북 실물로 보고 싶으면 지금 전화해.</p>
+                    <a href="tel:010-6279-0862">☎ 010-6279-0862</a>
+                    <p style="margin-top: 16px; font-size: 0.9rem;">※ 상담 환영. 24시간 가능 (연락처 확인 필수)</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em"> 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">엘든링 숨은 보스 데이터와 강서 셔츠룸의 실전 룩북 비교</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">미사용 모델 파일은 개발 팀이 폐기할 때 남긴 마지막 증거다. 이는 엘든링 데이터마이닝에서 발견된 3 종의 미공개 보스와 비슷한 맥락으로, 실제 구매 시점에 드러나지 않는 '강서 셔츠룸 룩북'의 숨겨진 재고와 대응된다. 두 영역 모두 표면 정보보다 파일이나 옷걸이 뒤에</p>
+      </div>
+      <a href="posts/interview-001-iv7l5d.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아날로그 문화 컬렉터들이 선정한 PBN 빌더 트렌드 정보 공유 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">아날로그 문화 컬렉터들이 선정한 PBN 빌더 트렌드 정보 공유 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">2 억 손실금, 임대차 계약서 한 줄로 홍대 가게가 죽는 이유</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아침 5 시가 되어도 비어있는 매장의 창문 유리를 두드리는 소리가 들린다. 어제까지 사람이 붐볐던 홍대 인근 상가는 오늘 아침엔 keys 가 테이블 위에 놓여 있다. 임대차 계약서에 적힌 '권리금 조정 조항'이 폐업의 결정적 트리거인 경우가 많다. 사람들이 매출 하락 </p>
+      </div>
+      <a href="posts/t3link-002-1kq8dpu.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
+  </div>
+
+<div class="seo-visual-divider" role="separator" aria-label="강서 셔츠룸 룩북 구분선" style="margin:80px 0;height:1px;background:#666666;opacity:0.1"></div>
+</section>
+<footer>
+        <p>© 2025 <a href="https://t3b08-gs-shirts-look.vercel.app">강서 셔츠룸 룩북</a> · All rights reserved · RAW AF</p>
+        <p style="margin-top: 8px;">주소: 서울 강서구 · 사업자등록번호: 000-00-00000 · 문의: 010-6279-0862</p>
+        <p style="margin-top: 8px; color: #555;">본 사이트는 PBN 목적으로 제작되었습니다. 모든 콘텐츠는 허구이며 교육적 용도입니다.</p>
+    </footer>
+
+    <script>
+        // 햄버거 메뉴 토글 스크립트 (중복 방지)
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('nav ul');
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    navMenu.classList.toggle('open');
+                });
+            }
+        });
+    </script>
+
+    <div class="juice-ref-7ek7gl" style="margin-top:2.5rem;padding:1rem 0;border-top:1px dashed #ccc;font-size:0.9rem;color:#666;">
+      <p style="font-weight:600;margin-bottom:0.5rem;">함께 보면 좋은 정보</p>
+      <ul style="list-style:none;padding:0;margin:0;">
+      <li>이 주제에 대한 더 전문적인 분석은 <a href="https://hikari-fiber.store/">tokyo-fiber</a>에서 확인하실 수 있습니다.</li>
+      <li>심층 정보와 실제 데이터는 <a href="https://aga-clinic.space/">tokyo-aga</a>를 참고하세요.</li>
+      <li>자세한 기술 명세 가이드는 <a href="https://ko.wikipedia.org/" rel="noopener noreferrer" target="_blank">공식 가이드 커뮤니티</a>를 참고하십시오.</li>
+      </ul>
+    </div>
+
+<!-- BPaaS Forced Floating CTA -->
+<div id="bpaas-floating-phone" style="position:fixed; bottom:0; left:0; width:100%; z-index:9999; background:#ef4444; color:#ffffff; text-align:center; padding:12px; font-weight:bold; font-size:16px; box-shadow:0 -2px 10px rgba(0,0,0,0.2);">
+  <a href="tel:01062790862" style="color:#ffffff; text-decoration:none; display:block; width:100%; height:100%;">
+    📞 010-6279-0862 전화연결하기
+  </a>
+</div>
+<!-- End BPaaS Forced Floating CTA -->
+
 </body>
 </html>
